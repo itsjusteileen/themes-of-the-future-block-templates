@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/space.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>The New Frontier</h1>
+					<h3 class="light">Theme Development for the Future</h3>
+					<p class="author">Presented by <a href="https://itsjusteileen.sidetrack.studio">its just eileen</a> from <a href="https://sidetrack.studio">Sidetrack Studio</a></p>
+					</p>
+				</section>
+
+				<section >
+					<p>Setting the mood</p>
+					<iframe src="https://open.spotify.com/embed/playlist/0vGnbBxazMABIrpESWtNuF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</section>
+
+				<section>
+					<h2>Hello There</h2>
+					<p>
+						hello! it's just eileen, here. i'm a design engineer of user experiences and interfaces for wordpress websites and products. i'm the founder at sidetrack studio and wpblockshop and the user success advocate for castos and the seriously simple podcasting plugin.
+					</p>
+				</section>
+
+				<section data-background="assets/get-started-sky.jpg">
+					<div class="btn-wrapper">
+						<canvas width="450" height="260" id="btn"></canvas>
+						<div class="svg-wrapper">
+							<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+							<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+								<stop offset="0%" stop-color="#DA22FF" />
+								<stop offset="100%" stop-color="#9733EE" />
+							</linearGradient>
+							</defs>
+							<rect class="shape" height="60" width="320" stroke="url(#gradient)" />
+							</svg>
+							<button class="btn">Let's Get Started</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back out.
+					</p>
+					<p>
+						(NOTE: Use ctrl + click in Linux.)
+					</p>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p>
+							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+							<span style="display: inline-block;" class="fragment fade-up">up, </span>
+							<span style="display: inline-block;" class="fragment fade-down">down, </span>
+							<span style="display: inline-block;" class="fragment fade-left">left</span>
+						</p>
+						<p class="fragment fade-in-then-out">fade-in-then-out</p>
+						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						reveal.js comes with a few themes built in: <br>
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom" >
+				<div >
+					<h2>THEME SUPPORTS</h2>
+				</div>
+			</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom" >
+					<div >
+						<h2>New Concepts</h2>
+						<p>The Block Editor provides support for new functionality that your theme can tap into. </p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Add Theme Supports</h2>
+					<p class="fragment fade-in-then-semi-out">Editor Color Palette</p>
+					<p class="fragment fade-in-then-semi-out">Editor Text Size Palette</p>
+					<p class="fragment fade-in-then-semi-out">Responsive Embeds</p>
+					<p class="fragment fade-in-then-semi-out">Frontend & Editor Styles</p>
+					<p class="fragment fade-in-then-semi-out">Dark Mode</p>
+				</section>
+
+				<section>
+					<h2>Editor Color Palette</h2>
+					<pre><code class="hljs" data-trim data-line-numbers="2">
+						function mytheme_setup_theme_supported_features() {
+							add_theme_support( 'editor-color-palette', array(
+								array(
+									'name' => __( 'sidetrack purple', 'themeLangDomain' ),
+									'slug' => 'sidetrack-purple',
+									'color' => '#773B7A',
+								),
+							) );
+						}					 
+						add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );						
+					</code></pre>
+				</section>
+
+
+			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom" >
+					<div >
+						<h2>Opt In Features</h2>
+						<p>The block editor also provides opt-in opinionated styles you can access.</p>
+					</div>
+			</section>
+
+				<section>
+					<h2>Default Block Styles</h2>
+					<p>Core blocks include default styles. The styles are enqueued for editing but are not enqueued for viewing unless the theme opts-in to the core styles.</p>
+						<pre><code class="hljs html" data-line-numbers="1">add_theme_support( 'wp-block-styles' );</code></pre>
+				</section>
+
+				<section>
+					<h2>Wide Alignment</h2>
+					<p>Some blocks such as the image block have the possibility to define a “wide” or “full” alignment by adding the corresponding classname to the block’s wrapper ( alignwide or alignfull ).</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1">
+						add_theme_support( 'align-wide' );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Floats</h2>
+					<p>The block editor adds additional markup to floated images and images with captions to make styling them easier.</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1,2">
+						<div class="wp-block-image">
+							<figure class="alignleft">
+								<img src="..." alt="" width="200px" />
+								<figcaption>Short image caption.</figcaption>
+							</figure>
+						</div>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Block Color Palettes</h2>
+					<pre><code class="hljs" data-trim data-line-numbers="1,3,8">
+						add_theme_support( 'editor-color-palette', array(
+							array(
+								'name' => __( 'sidetrack dark space', 'themeLangDomain' ),
+								'slug' => 'sidetrack-dark-space',
+								'color' => '#a156b4',
+							),
+							array(
+								'name' => __( 'sidetrack neon purple', 'themeLangDomain' ),
+								'slug' => 'sidetrack-neon-purple',
+								'color' => '#d0a5db',
+							),
+						) );
+					</code></pre>
+					<p>Different blocks have the possibility of customizing colors. The block editor provides a default palette, but a theme can overwrite it and provide its own.</p>
+				</section>
+
+				<section>
+					<small>Theme Supports</small>
+					<h2>Deep Dive</h2>
+						<p class="fragment fade-in-then-semi-out">name is a human-readable label that appears in the tooltip and provides a meaningful color description.</p>
+						<p class="fragment fade-in-then-semi-out">slug is a unique identifier used to generate the CSS classes for the block editor color palette.</p>
+						<p class="fragment fade-in-then-semi-out">color is the hexadecimal code to specify the color.</p>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="https://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			$(function() {
+
+//Set animation frame
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+var canvas = $('#btn')[0],
+  ctx = canvas.getContext('2d'),
+  canvasW = canvas.width,
+  canvasH = canvas.height;
+var color = "#fff"
+
+// Mask for button
+ctx.rect(0, 0, 450, 110);
+ctx.rect(0, 160, 450, 100);
+ctx.rect(0, 100, 100, 60);
+ctx.rect(350, 100, 100, 60);
+
+// Clip the view of the canvas
+ctx.clip();
+
+var emitter = {};
+
+var stops = [0, 125],
+  stopIndex = 0,
+  delay = 0,
+  prog = 0;
+
+var circle = {
+  radius: 125,
+  angle: 0
+};
+
+var particles = new Array();
+
+var rate = 2,
+  time = 0,
+  frameIndex = rate;
+
+var simplex = new SimplexNoise(),
+  simplexVal = 0,
+  simplexStart = 20;
+
+//Start loop
+
+draw();
+
+$(document).on('mouseenter mouseleave', '.btn', function() {
+  stops = [0, 125],
+	stopIndex = 0,
+	delay = 0,
+	prog = 0;
+  emitter.dx = 0;
+  emitter = {
+	h: 60,
+	x: canvasW / 2 - 125,
+	y: canvasH / 2,
+	vx: 5,
+	vy: 5,
+	v: 0.05,
+	dx: 0,
+	dy: 0
+  };
+
+});
+
+//Draw
+function draw() {
+
+  ctx.globalCompositeOperation = 'source-out';
+  ctx.fillStyle = 'rgba(0,0,0,0)';
+  ctx.fillRect(0, 0, canvasW, canvasH);
+  ctx.globalCompositeOperation = 'normal';
+
+  //Move emitter
+  if (stops[stopIndex] == prog) {
+	stopIndex++;
+	delay = 0;
+  } else {
+	if (delay == 0 && prog < stops[stopIndex]) {
+	  emitter.dx = -1;
+	  emitter.x += 20;
+	  prog += 1 * 10;
+	} else {
+	  emitter.dx = 0;
+	  delay--;
+	}
+  }
+
+  //Draw particles
+  var i = 0;
+  for (i in particles) {
+	var p = particles[i];
+
+	//Check if die
+	if (time > p.die) {
+	  p.o -= 0.01;
+	  if (p.o < 0) {
+		particles.splice(i, 1);
+	  }
+	}
+
+	//Add v
+	p.x += p.vx;
+	p.y += p.vy;
+
+	//Add source move
+	p.x += p.sourcedx / 10;
+	p.y += p.sourcedy / 10;
+
+	//Simplex noise
+	if (p.simplexIndex > simplexStart) {
+	  p.simplexVal = simplex.noise3D(p.x / 100, p.y / 100, time / 500);
+	}
+
+	p.simplexIndex++;
+	p.x += p.simplexVal;
+	p.y += p.simplexVal;
+
+	ctx.beginPath();
+	ctx.fillStyle = color;
+	ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI, true);
+	ctx.fill();
+	ctx.save();
+  }
+
+  //if emitter is moving
+  if (emitter.dx !== 0) {
+	for (var i = 0; i < rate; i++) {
+	  //Create particle
+	  var particle = {
+		x: emitter.x,
+		y: emitter.y,
+		r: Math.random() + 0.2,
+		vx: (Math.random() - 0.5),
+		vy: (Math.random() - 0.5),
+		o: 1,
+		birth: time,
+		die: time + (Math.random() * 50 + 50), //1+1),
+		sourcedx: emitter.dx,
+		sourcedy: emitter.dy,
+		red: Math.round(Math.random() * 255),
+		green: Math.round(Math.random() * 255),
+		blue: Math.round(Math.random() * 255),
+		simplexVal: 0,
+		simplexIndex: 0
+	  };
+
+	  particles.push(particle);
+	}
+  }
+
+  time++;
+  window.requestAnimationFrame(draw);
+}
+
+});
+
+		</script>
+
+	</body>
+</html>
