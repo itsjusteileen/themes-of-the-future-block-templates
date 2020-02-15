@@ -77,6 +77,14 @@ h3.light {
 .reveal h1 {
   text-shadow: none; }
 
+.reveal ul.social-icons {
+  list-style-type: none !important;
+  display: flex;
+  max-width: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /*********************************************
  * Particle Button
