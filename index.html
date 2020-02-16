@@ -327,6 +327,113 @@
 
 				<section>
 					<div >
+						<h2>Block Based Themes</h2>
+					</div>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>What is a Block Based Theme?</h2>
+					<p>A WordPress theme with templates entirely composed of blocks so that in addition to the post content of the different post types (pages, posts, …), the block editor can also be used to edit all areas of the site: headers, footers, sidebars, etc. </p>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>Block-based Theme Structure</h2>
+					<pre><code class="hljs" data-trim data-line-numbers="1">
+						theme
+							|__ style.css
+							|__ functions.php
+							|__ block-templates
+								|__ index.html
+								|__ single.html
+								|__ archive.html
+								|__ ...
+							|__ block-template-parts
+								|__ header.html
+								|__ footer.html
+								|__ sidebar.html
+								|__ ...
+					</code></pre>
+					<p>The difference with existing WordPress themes is that the different templates in the template hierarchy, and template parts, are block templates instead of php files.</p>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>What is a Block Template</h2>
+					<p>A block template is made up of a list of blocks. Any WordPress block can be used in a template. Templates can also reuse parts of their content using “Template Parts”. For example, all the block templates can have the same header included from a separate header.html template part.</p>
+					<aside class="notes">
+						Notes here
+					</aside>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>Block Template</h2>
+					<pre><code class="hljs" data-trim data-line-numbers="1">
+						<!-- wp:site-title /-->
+						
+						<!-- wp:image {"sizeSlug":"large"} -->
+						<figure class="wp-block-image size-large">
+							<img src="https://cldup.com/0BNcqkoMdq.jpg" alt="" />
+						</figure>
+						<!-- /wp:image -->
+						
+						<!-- wp:group -->
+						<div class="wp-block-group">
+							<div class="wp-block-group__inner-container">
+								<!-- wp:post-title /-->
+								<!-- wp:post-content /-->
+							</div>
+						</div>
+						<!-- /wp:group -->
+						
+						<!-- wp:group -->
+						<div class="wp-block-group">
+							<div class="wp-block-group__inner-container">
+								<!-- wp:heading -->
+								<h2>Footer</h2>
+								<!-- /wp:heading -->
+							</div>
+						</div>
+						<!-- /wp:group -->
+					</code></pre>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>Templates CPT</h2>
+					<p>If you save the templates directly from the temporary Templates admin menu, you’ll be able to override your theme’s templates.
+
+						Example: By using single as the title for your template and saving it, this saved template will take precedence over your theme’s single.html file.
+						
+						Note that it won’t take precedence over any of your theme’s templates with higher specificity in the template hierarchy. Resolution goes from most to least specific, looking first for a CPT post and then for a theme template, at each level.</p>
+					<aside class="notes">
+						Notes here
+					</aside>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>Styling</h2>
+					<p>One of the most important aspects of themes (if not the most important) is the styling. While initially you’ll be able to provide styles and enqueue them using the same hooks themes have always used, this is an area that is still being explored.</p>
+					<aside class="notes">
+						Notes here
+					</aside>
+				</section>
+
+				<section>
+					<small>Block Based Themes</small>
+					<h2>Theme Blocks</h2>
+					<p>Some blocks have been made specifically for block-based themes. For example, you’ll most likely use the Site Title block in your site’s header while your single block template will most likely include a Post Title and a Post Content block.
+						As we’re still early in the process, the number of blocks specifically dedicated to these block templates is relatively small but more will be added as we move forward with the project.</p>
+					<aside class="notes">
+						Notes here
+					</aside>
+				</section>
+
+				<section>
+					<div >
 						<h2>Full Site Editing</h2>
 					</div>
 				</section>
