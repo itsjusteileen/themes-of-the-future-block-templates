@@ -1,6 +1,6 @@
 // © Richard Hedberg 2015
 
-$(function() {
+jQuery(function($) {
 
   //Set animation frame
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -22,39 +22,39 @@ $(function() {
 
   var emitter = {};
 
-  var stops = [0, 125],
+  var stops = [0, 450],
     stopIndex = 0,
     delay = 0,
     prog = 0;
 
   var circle = {
-    radius: 125,
+    radius: 450,
     angle: 0
   };
 
   var particles = new Array();
 
-  var rate = 2,
+  var rate = 7,
     time = 0,
     frameIndex = rate;
 
   var simplex = new SimplexNoise(),
     simplexVal = 0,
-    simplexStart = 20;
+    simplexStart = 420;
 
   //Start loop
 
   draw();
 
   $(document).on('mouseenter mouseleave', '.btn', function() {
-    stops = [0, 125],
+    stops = [0, 670],
       stopIndex = 0,
       delay = 0,
       prog = 0;
     emitter.dx = 0;
     emitter = {
       h: 60,
-      x: canvasW / 2 - 125,
+      x: canvasW / 2 - 670,
       y: canvasH / 2,
       vx: 5,
       vy: 5,
