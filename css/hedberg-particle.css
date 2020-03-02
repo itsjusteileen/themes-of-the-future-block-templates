@@ -1,0 +1,86 @@
+body,
+html {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+body {
+	background: url("https://i.imgur.com/1MvxU9w.jpg");
+	background-size: cover;
+}
+
+#btn {
+	position: absolute;
+}
+
+.btn {
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	position: absolute;
+	font-size: 1.1rem;
+	outline: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 250px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0);
+	border: 0px solid #fff;
+	margin: 100px 0 0 100px;
+}
+
+.btn-wrapper {
+	width: 450px;
+	height: 260px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	overflow: hidden;
+}
+.btn-wrapper .topR, .btn-wrapper .topL {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition-delay: .2s;
+}
+
+.btn-wrapper:hover .topL {
+	-webkit-transform: translateX(-125px);
+	transform: translateX(-125px);
+	-webkit-transition-delay: 0s;
+}
+.btn-wrapper:hover .topR {
+	-webkit-transform: translateX(125px);
+	transform: translateX(125px);
+	-webkit-transition-delay: 0s;
+}
+.btn-wrapper:hover .left {
+	-webkit-transform: translateY(60px);
+	transform: translateY(60px);
+	-webkit-transition-delay: .2s;
+}
+.btn-wrapper:hover .right {
+	-webkit-transform: translateY(60px);
+	transform: translateY(60px);
+	-webkit-transition-delay: .2s;
+}
+
+svg {
+	margin: 100px 0 0 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 60px;
+}
+
+svg line {
+	stroke-width: 3;
+	stroke: #fff;
+	fill: none;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
