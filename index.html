@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Themes of the Future</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="The new frontier of Gutenberg block-based themes">
+		<meta name="author" content="itsjusteileen">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -327,6 +327,110 @@
 
 				<section>
 					<div >
+						<h2>Block Templates</h2>
+					</div>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>What are Block Templates</h2>
+					<p>Block Templates allow theme builders to give editors guiderails setting up a page with a block layout. </p>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>How do I make Block Templates</h2>
+					<p>Three ways to make Block Templates:</p>
+						<p class="fragment fade-in-then-semi-out">php</p>
+						<p class="fragment fade-in-then-semi-out">js</p>
+						<p class="fragment fade-in-then-semi-out">custom post template</p>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>PHP</h2>
+					<p>Create a function that adds an array of blocks for admin users to populate.</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1">
+						function sidetrack_register_template() {
+							$post_type_object = get_post_type_object( 'post' );
+							$post_type_object->template = array(
+							array( 'core/image' ),
+							);
+						}
+						add_action( 'init', 'sidetrack_register_template' );
+					</code></pre>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>JS</h2>
+					<p>Create a new block using InnerBlocks and templates, creating a set of blocks based off the template.</p>
+					<pre><code class="hljs" data-trim data-line-numbers="5">
+						fconst el = wp.element.createElement;
+						const { registerBlockType } = wp.blocks;
+						const { InnerBlocks } = wp.blockEditor;
+						 
+						const BLOCKS_TEMPLATE = [
+							[ 'core/image', {} ],
+							[ 'core/paragraph', { placeholder: 'Image Details' } ],
+						];
+						 
+						registerBlockType( 'myplugin/template', {
+							title: 'My Template Block',
+							category: 'widgets',
+							edit: ( props ) => {
+								return el( InnerBlocks, {
+									template: BLOCKS_TEMPLATE,
+									templateLock: false
+								});
+							},
+							save: ( props ) => {
+								return el( InnerBlocks.Content, {} );
+							},
+						});
+					</code></pre>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>Custom Post Type</h2>
+					<p>Create and register a custom post type. </p>
+					<pre><code class="hljs" data-trim data-line-numbers="1">
+						function sidetrack_register_audio_post_type() {
+							$args = array(
+								'public' => true,
+								'label'  => 'Audio',
+								'template_lock' => all,
+								'show_in_rest' => true,
+								'template' => array(
+									array( 'core/image', array(
+										'align' => 'left',
+									) ),
+									array( 'core/audio', array(
+										'align' => 'right',
+									) ),
+									array( 'core/heading', array(
+										'placeholder' => 'Lyrics',
+									) ),
+									array( 'core/paragraph', array(
+										'placeholder' => 'Add lyrics',
+									) ),
+								),
+							);
+							register_post_type( 'audio', $args );
+						}
+						add_action( 'init', 'sidetrack_register_audio_post_type' );
+					</code></pre>
+				</section>
+
+				<section>
+					<small>Block Templates</small>
+					<h2>Here's the Visual</h2>
+					<img width="1020" height="450" data-src="assets/audio-template.png" alt="audio-template"></a>
+				</section>
+
+				<section>
+					<div >
 						<h2>Block Based Themes</h2>
 					</div>
 				</section>
@@ -485,7 +589,9 @@
 					<div> <h6>Get the slides on</h6>
 						<ul>
 							<a href="https://sidetrack.studio">Sidetrack Studio</a></br>
-							<a href="https://github.com/itsjusteileen">GitHub</a>
+							<a href="https://github.com/SidetrackStudio">Sidetrack GitHub</a></br>
+							<a href="https://github.com/itsjusteileen">itsjusteileen GitHub</a></br>
+							<a href="https://itsjusteileen.sidetrack.studio">itsjusteileen</a>
 						</ul>
 					</div>
 					<ul class="social-icons">
