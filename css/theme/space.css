@@ -4,7 +4,7 @@
  * By itsjusteileen, https://itsjusteileen.sidetrack.studio , https://beyondpretty.design
  */
 @import url('https://fonts.googleapis.com/css?family=Syncopate:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow+Semi+Condensed|Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -48,8 +48,8 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: "Barlow", Helvetica, sans-serif;
-  font-weight: medium;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
