@@ -154,23 +154,22 @@
 				<section>
 					<small>Theme Supports</small>
 					<h2>Default Block Styles</h2>
-					<p>Core blocks include default styles. The styles are enqueued for editing but are not enqueued for viewing unless the theme opts-in to the core styles.</p>
 						<pre><code class="hljs html" data-line-numbers="1">add_theme_support( 'wp-block-styles' );</code></pre>
-				</section>
+						<p>Core blocks include default styles. The styles are enqueued for editing but are not enqueued for viewing unless the theme opts-in to the core styles.</p>
+					</section>
 
 				<section>
 					<small>Theme Supports</small>
 					<h2>Wide Alignment</h2>
-					<p>Some blocks such as the image block have the possibility to define a “wide” or “full” alignment by adding the corresponding classname to the block’s wrapper ( alignwide or alignfull ).</p>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						add_theme_support( 'align-wide' );
 					</code></pre>
+					<p>Some blocks such as the image block have the possibility to define a “wide” or “full” alignment by adding the corresponding classname to the block’s wrapper ( alignwide or alignfull ).</p>
 				</section>
 
 				<section>
 					<small>Theme Supports</small>
 					<h2>Floats</h2>
-					<p>The block editor adds additional markup to floated images and images with captions to make styling them easier.</p>
 					<pre><code class="hljs" data-trim data-line-numbers="1,2">
 						<div class="wp-block-image">
 							<figure class="alignleft">
@@ -179,6 +178,7 @@
 							</figure>
 						</div>
 					</code></pre>
+					<p>The block editor adds additional markup to floated images and images with captions to make styling them easier.</p>
 				</section>
 
 				<section>
@@ -373,12 +373,12 @@
 						}
 						add_action( 'init', 'sidetrack_register_template' );
 					</code></pre>
+					<p>Create a function that adds an array of blocks for admin users to populate.</p>
 				</section>
 
 				<section>
 					<small>Block Templates</small>
 					<h2>JS</h2>
-					<p>Create a new block using InnerBlocks and templates, creating a set of blocks based off the template.</p>
 					<pre><code class="hljs" data-trim data-line-numbers="5">
 						fconst el = wp.element.createElement;
 						const { registerBlockType } = wp.blocks;
@@ -403,12 +403,12 @@
 							},
 						});
 					</code></pre>
+					<p>Create a new block using InnerBlocks and templates, creating a set of blocks based off the template.</p>
 				</section>
 
 				<section>
 					<small>Block Templates</small>
 					<h2>Custom Post Type</h2>
-					<p>Create and register a custom post type. </p>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						function sidetrack_register_audio_post_type() {
 							$args = array(
@@ -457,13 +457,13 @@
 
 				<section>
 					<small>Block-Based Themes</small>
-					<h2>Block Template</h2>
+					<h2>Block Base Theme Templates are Different</h2>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						<!-- wp:site-title /-->
 						
 						<!-- wp:image {"sizeSlug":"large"} -->
 						<figure class="wp-block-image size-large">
-							<img src="https://cldup.com/0BNcqkoMdq.jpg" alt="" />
+							<img src="http://placebeard.it/640/480" alt="" />
 						</figure>
 						<!-- /wp:image -->
 						
@@ -490,8 +490,8 @@
 
 				<section>
 					<small>Block-Based Themes</small>
-					<h2>What Makes Block-based Themes Different</h2>
-					<p>The template and the template parts are .html files instead of .php.</p>
+					<h2>What's the Difference?</h2>
+					<p>In Block-Based themes the template and the template parts are .html files instead of .php.</p>
 				</section>
 
 				<section>
@@ -516,23 +516,10 @@
 
 				<section>
 					<small>Block-Based Themes</small>
-					<h2>What is a Block Template</h2>
+					<h2>What is a Block Template?</h2>
 					<p class="fragment">Block templates are made up of a list of blocks.</p>
 					<p class="fragment">Any WordPress block can be used in a template.</p>
 					<p class="fragment">Templates can use “Template Parts” comprised of blocks.</p>
-					<aside class="notes">
-						Notes here
-					</aside>
-				</section>
-
-				<section>
-					<small>Block-Based Themes</small>
-					<h2>Templates CPT</h2>
-					<p>If you save the templates directly from the temporary Templates admin menu, you’ll be able to override your theme’s templates.
-
-						Example: By using single as the title for your template and saving it, this saved template will take precedence over your theme’s single.html file.
-						
-						Note that it won’t take precedence over any of your theme’s templates with higher specificity in the template hierarchy. Resolution goes from most to least specific, looking first for a CPT post and then for a theme template, at each level.</p>
 					<aside class="notes">
 						Notes here
 					</aside>
@@ -552,7 +539,7 @@
 					<h2>Theme Blocks</h2>
 					<p>Some blocks have been made specifically for block-based themes like Site Title block in your site’s header while your single block template will most likely include a Post Title and a Post Content block.</p>
 					<aside class="notes">
-						Notes here
+						Notes here, get list of specific blocks.
 					</aside>
 				</section>
 
@@ -576,10 +563,18 @@
 
 				<section>
 					<small>Full Site Editing</small>
-					<h2>How does it work</h2>
-					<p>Builds on the current Template Heirarchy</p>
+					<p>Video to come</p>
 					<aside class="notes">
-						Full Site Editing sits behind an Experimental Flag in the Gutenberg Plugin. It's not a part of Core and should not be used on production.
+						Notes here.
+					</aside>
+				</section>
+
+				<section>
+					<small>Full Site Editing</small>
+					<h2>Templates CPT</h2>
+					<p>You can create your template CPT directly in the editor with blocks, no need to edit a file. This template takes precedence over your theme’s single.html file.
+					<aside class="notes">
+						Note that it won’t take precedence over any of your theme’s templates with higher specificity in the template hierarchy. Resolution goes from most to least specific, looking first for a CPT post and then for a theme template, at each level.</p>
 					</aside>
 				</section>
 
