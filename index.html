@@ -308,37 +308,38 @@
 				<section>
 						<small>Theme Supports</small>
 						<h2>Editor styles</h2>
-						<p>The block editor supports the theme’s editor styles, however it works a little differently than in the classic editor.</p>
 						<pre><code class="hljs" data-trim data-line-numbers="1">
 							add_theme_support('editor-styles');
 						</code></pre>
+						<p>The block editor supports the theme’s editor styles, however it works a little differently than in the classic editor.</p>
+
 				</section>
 
 				<section>
 					<small>Theme Supports</small>
 					<h2>Enqueuing the editor style</h2>
-					<p>Use the add_editor_style function to enqueue and load CSS on the editor screen. For the classic editor, this was the only function needed to add style to the editor. </p>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						add_editor_style( 'style-editor.css' );
 					</code></pre>
+					<p>Use the add_editor_style function to enqueue and load CSS on the editor screen. For the classic editor, this was the only function needed to add style to the editor. </p>
 				</section>
 
 				<section>
 					<small>Theme Supports</small>
 					<h2>Responsive embedded content</h2>
-					<p>embed blocks automatically apply styles to embedded content to reflect the aspect ratio of content that is embedded in an iFrame. A block styled with the aspect ratio responsive styles would look like: </p>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						<figure class="wp-embed-aspect-16-9 wp-has-aspect-ratio">...</figure>
 					</code></pre>
+					<p>Embed blocks automatically apply styles to embedded content to reflect the aspect ratio of content that is embedded in an iFrame. A block styled with the aspect ratio responsive styles would look like. </p>
 				</section>
 
 				<section>
 					<small>Theme Supports</small>
 					<h2>Responsive embedded content</h2>
-					<p>To make the content resize and keep its aspect ratio, the <body> element needs the wp-embed-responsive class. This is not set by default, and requires the theme to opt in to the responsive-embeds feature: </p>
 					<pre><code class="hljs" data-trim data-line-numbers="1">
 						add_theme_support( 'responsive-embeds' );
 					</code></pre>
+					<p>To make the content resize and keep its aspect ratio, the <body> element needs the wp-embed-responsive class. This is not set by default, and requires the theme to opt in to the responsive-embeds feature. </p>
 				</section>
 
 				<section>
