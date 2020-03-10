@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>reveal.js – The HTML Presentation Framework</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+		/*.reveal div.header-left,*/
+		#header {
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="reveal">
+
+		<div id="hidden">
+			<div id="header">
+				<div id="target" class="header-left">test header left</div>
+			</div>
+		</div>
+
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Reveal.js</h1>
+				<h3>The HTML Presentation Framework</h3>
+				<p>
+					<small>Created by $x^2$ <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Hello There</h2>
+				<p>
+					reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+				</p>
+			</section>
+
+			<!-- Example of nested vertical slides -->
+			<section>
+				<section>
+					<h2>Vertical Slides</h2>
+					<p>Slides can be nested inside of each other.</p>
+					<p>Use the <em>Space</em> key to navigate through all slides.</p>
+					<br>
+					<a href="#" class="navigate-down">
+						<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+					</a>
+				</section>
+				<section>
+					<h2>Basement Level 1</h2>
+					<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+				</section>
+				<section>
+					<h2>Basement Level 2</h2>
+					<p>That's it, time to go back up.</p>
+					<br>
+					<a href="#/2">
+						<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+					</a>
+				</section>
+			</section>
+
+			<div id="fffffs">
+				<p>moveTHISthing</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+	    // Full list of configuration options available at:
+	    // https://github.com/hakimel/reveal.js#configuration
+	    Reveal.initialize({
+	    	controls: false,
+	    	progress: true,
+	    	slideNumber: true,
+	    	history: true,
+	    	center: false, 
+	        transition: 'slide', // none/fade/slide/convex/concave/zoom
+	        math: {
+	        	mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+	            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	        },
+	        // Optional reveal.js plugins
+	        dependencies: [
+	        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+	        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+	        { src: 'plugin/zoom-js/zoom.js', async: true },
+	        { src: 'plugin/notes/notes.js', async: true },
+	        { src: 'plugin/math/math.js', async: true }
+	        ]
+	    });
+	</script>
+
+	<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		var MyDiv1 = document.getElementById('target');
+		var MyDiv2 = document.getElementById('fffffs');
+		MyDiv2.innerHTML = MyDiv1.innerHTML;
+		// MyDiv1.innerHTML = MyDiv2.innerHTML;
+		setTimeout(function() {
+			MyDiv1.style.color = 'tomato';
+			MyDiv1.style.fontWeight = '700';
+			MyDiv1.style.fontSize = '1.2rem';
+		}, 3000);
+	</script>
+	<script type="text/javascript">
+		var header = $('#header').html();
+		// var title = $('#fffffs').html();
+		if ( window.location.search.match( /print-pdf/gi ) ) {
+			$('.slides > section').prepend(header);
+		} else {
+			setTimeout(function() {
+				$('.slides').prepend(header);
+			}, 3000);
+		}
+	</script>
+
+</body>
+
+</html>
