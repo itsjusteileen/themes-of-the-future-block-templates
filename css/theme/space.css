@@ -144,6 +144,20 @@ h3.light {
   word-wrap: break-word;
 }
 
+.reveal h5 {
+  display: block;
+  margin: auto 0;
+  color:#fff;
+  font-family: "Syncopate", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
 
 /*********************************************
  * Groovy SVG Button
